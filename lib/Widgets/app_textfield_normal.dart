@@ -54,7 +54,7 @@ class _AppTextfieldNormal extends State<AppTextfieldNormal> {
           contentPadding: widget.contentPadding,
           hintStyle: const TextStyle(
             fontFamily: 'DMSerifDisplay',
-            fontSize: 14,
+            fontSize: 12,
           ),
           suffixIcon: widget.suffix,
           prefixIcon: widget.prefix,

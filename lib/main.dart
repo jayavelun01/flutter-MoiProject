@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:moi_appdesign/Screens/add_collection.dart';
 import 'package:moi_appdesign/Screens/admin_approval.dart';
 import 'package:moi_appdesign/Screens/create_function.dart';
 import 'package:moi_appdesign/Screens/home_screen.dart';
+import 'package:moi_appdesign/Screens/view_CollectionDetails.dart';
 import 'package:moi_appdesign/Screens/view_collection.dart';
 import 'package:moi_appdesign/Screens/view_functions.dart';
 import 'package:moi_appdesign/Widgets/app_theme.dart';
@@ -30,7 +32,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => MoiViewCollection(),
+        '/': (context) => MoiAddCollections(),
+        // '/': (context) => MoiCollectionDetails(),
+        // '/': (context) => MoiViewCollection(),
         // '/': (context) => MoiSplashScreen(),
         // '/': (context) => MoiResetPassword(),
         // '/': (context) => MoiViewFunctions(),
