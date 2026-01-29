@@ -12,14 +12,6 @@ class _MoiResetPasswordState extends State<MoiResetPassword> {
   bool _obscure = true;
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void dispose() {}
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(

@@ -61,7 +61,7 @@ class _AppTextFieldState extends State<AppTextField> {
           //Prefix Icon
           prefixIcon: Padding(
             padding: const EdgeInsets.all(15),
-            child: Image.asset(widget.prefixIcon),
+            child: Image.asset(widget.prefixIcon, height: 15),
           ),
           //Suffix Icon (only for password)
           suffixIcon: widget.isPassword

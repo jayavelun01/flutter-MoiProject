@@ -1,7 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:moi_appdesign/Widgets/app_listfunction.dart';
 
-class MoiHomeScreen extends StatelessWidget {
+class MoiHomeScreen extends StatefulWidget {
+  const MoiHomeScreen({super.key});
+
+  @override
+  State<MoiHomeScreen> createState() => _MoiHomeScreenState();
+}
+
+class _MoiHomeScreenState extends State<MoiHomeScreen> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final List<Map<String, dynamic>> drawerItems = [
+    {'title': 'Home', 'image': 'assets/Hut.png', 'route': '/home'},
+    {
+      'title': 'Create a Function',
+      'image': 'assets/Notepad.png',
+      'route': '/createFunction',
+    },
+    {
+      'title': 'View Function',
+      'image': 'assets/View_function.png',
+      'route': '/viewFunction',
+    },
+    {'title': 'My Profile', 'image': 'assets/User.png', 'route': '/myProfile'},
+    {
+      'title': 'Notifications',
+      'image': 'assets/Notifications.png',
+      'route': '/notifications',
+    },
+    {'title': 'Help', 'image': 'assets/Help.png', 'route': '/help'},
+    {'title': 'Share the App', 'image': 'assets/Share.png', 'route': '/share'},
+    {'title': 'Log out', 'image': 'assets/Logout.png', 'route': '/logout'},
+  ];
+
   final List<Map<String, dynamic>> functionslist = [
     {
       'title': 'Wedding Function',
@@ -19,18 +51,25 @@ class MoiHomeScreen extends StatelessWidget {
     },
   ];
 
-  MoiHomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: _buildDrawer(),
       backgroundColor: Color(0xFF9A2143),
       appBar: AppBar(
         centerTitle: true,
         // toolbarHeight: 80,
         backgroundColor: const Color(0xFF9A2143),
         title: Image.asset('assets/Moi_logo.png', width: 150),
-        leading: Image.asset('assets/Menu_rounded.png', width: 60),
+        leading: IconButton(
+          icon: Icon(Icons.menu, color: Colors.white),
+          onPressed: () {
+            _scaffoldKey.currentState?.openDrawer();
+          },
+          // icon: Icon(Icons.menu, color: Colors.white),
+        ),
+        // leading: Image.asset('assets/Menu_rounded.png', width: 60),
         actions: [
           Icon(Icons.notifications_none, color: Colors.white),
           SizedBox(width: 10),
@@ -191,6 +230,47 @@ class MoiHomeScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildDrawer() {
+    return Drawer(
+      backgroundColor: Color(0xFF9A2143),
+
+      child: Padding(
+        padding: const EdgeInsets.only(top: 30),
+        child: ListView.separated(
+          itemCount: drawerItems.length,
+          separatorBuilder: (context, index) {
+            return Divider(color: Colors.white, height: 1);
+          },
+          itemBuilder: (context, index) {
+            final item1 = drawerItems[index];
+
+            return ListTile(
+              leading: Image.asset(
+                item1['image'],
+                height: 20,
+                color: Colors.white,
+              ),
+              title: Text(
+                item1['title'],
+                style: TextStyle(color: Colors.white),
+              ),
+              trailing: Icon(
+                Icons.chevron_right,
+                color: Colors.white,
+                size: 20,
+              ),
+              horizontalTitleGap: 8,
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, item1['route']);
+              },
+            );
+          },
+        ),
       ),
     );
   }

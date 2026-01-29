@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moi_appdesign/Widgets/app_button.dart';
 
 class MoiLoginScreen extends StatefulWidget {
-  MoiLoginScreen({super.key});
+  const MoiLoginScreen({super.key});
 
   @override
   State<MoiLoginScreen> createState() => _MoiLoginScreenState();
@@ -10,14 +10,6 @@ class MoiLoginScreen extends StatefulWidget {
 
 class _MoiLoginScreenState extends State<MoiLoginScreen> {
   bool _obscure = true;
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  void dispose() {}
 
   @override
   Widget build(BuildContext context) {

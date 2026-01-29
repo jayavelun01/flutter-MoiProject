@@ -9,6 +9,7 @@ class AppTextfieldNormal extends StatefulWidget {
   final EdgeInsetsGeometry contentPadding;
   final Widget? suffix;
   final Widget? prefix;
+  final bool alignHintTop;
 
   const AppTextfieldNormal({
     super.key,
@@ -16,13 +17,14 @@ class AppTextfieldNormal extends StatefulWidget {
     this.controller,
     this.keyboardType = TextInputType.text,
     this.width = 350,
-    this.height = 50,
+    this.height = 40,
     this.contentPadding = const EdgeInsets.symmetric(
       horizontal: 15,
       vertical: 18,
     ),
     this.suffix,
     this.prefix,
+    this.alignHintTop = false,
   });
 
   @override
@@ -47,14 +49,22 @@ class _AppTextfieldNormal extends State<AppTextfieldNormal> {
       child: TextField(
         controller: widget.controller,
         keyboardType: widget.keyboardType,
-        textAlignVertical: TextAlignVertical.center,
+
+        // conditional override
+        textAlignVertical: widget.alignHintTop
+            ? TextAlignVertical.top
+            : TextAlignVertical.center,
+
+        maxLines: widget.alignHintTop ? null : 1,
+        expands: widget.alignHintTop,
+
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: widget.hint,
           contentPadding: widget.contentPadding,
           hintStyle: const TextStyle(
             fontFamily: 'DMSerifDisplay',
-            fontSize: 12,
+            fontSize: 10,
           ),
           suffixIcon: widget.suffix,
           prefixIcon: widget.prefix,

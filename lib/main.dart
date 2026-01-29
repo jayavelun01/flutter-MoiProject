@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:moi_appdesign/Screens/add_collection.dart';
+import 'package:moi_appdesign/Screens/add_collection_01.dart';
 import 'package:moi_appdesign/Screens/admin_approval.dart';
 import 'package:moi_appdesign/Screens/create_function.dart';
 import 'package:moi_appdesign/Screens/home_screen.dart';
+import 'package:moi_appdesign/Screens/myprofile_screen.dart';
+import 'package:moi_appdesign/Screens/notifications_screen.dart';
 import 'package:moi_appdesign/Screens/view_CollectionDetails.dart';
 import 'package:moi_appdesign/Screens/view_collection.dart';
 import 'package:moi_appdesign/Screens/view_functions.dart';
@@ -30,16 +32,19 @@ class MyApp extends StatelessWidget {
       // themeMode: ThemeMode.system,
       // colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF89241C)),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      // initialRoute: '/',
+      home: const MoiHomeScreen(),
       routes: {
-        '/': (context) => MoiAddCollections(),
+        '/notifications': (context) => MoiNotifications(),
+        '/myProfile': (context) => MoiMyprofile(),
+        // '/': (context) => MoiAddCollections(),
         // '/': (context) => MoiCollectionDetails(),
         // '/': (context) => MoiViewCollection(),
         // '/': (context) => MoiSplashScreen(),
         // '/': (context) => MoiResetPassword(),
-        // '/': (context) => MoiViewFunctions(),
-        // '/': (context) => MoiCreateFunction(),
-        // '/': (context) => MoiHomeScreen(),
+        '/viewFunction': (context) => MoiViewFunctions(),
+        '/createFunction': (context) => MoiCreateFunction(),
+        '/home': (context) => MoiHomeScreen(),
         // '/': (context) => MoiAdminApproval(),
         // '/': (context) => MoiSignupScreen(),
         // '/verification_screen': (context) => MoiVerificationScreen(),
