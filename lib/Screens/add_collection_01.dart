@@ -249,47 +249,6 @@ class _MoiAddCollectionsState extends State<MoiAddCollections> {
                       _buildSelectedView(),
                     ],
                   ),
-
-                  // SizedBox(height: 10),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //   children: [
-                  //     Column(
-                  //       crossAxisAlignment: CrossAxisAlignment.start,
-                  //       children: [
-                  //         Text(
-                  //           'Amount',
-                  //           style: TextStyle(
-                  //             fontFamily: 'DMSerifDisplay',
-                  //             fontSize: 10,
-                  //           ),
-                  //         ),
-                  //         SizedBox(height: 5),
-                  //         AppTextfieldNormal(
-                  //           hint: 'Amount',
-                  //           width: 160,
-                  //           alignHintTop: true,
-                  //         ),
-                  //       ],
-                  //     ),
-
-                  //     SizedBox(width: 20),
-                  //     Column(
-                  //       children: [
-                  //         Text(
-                  //           'Upload Image',
-                  //           style: TextStyle(
-                  //             fontFamily: 'DMSerifDisplay',
-                  //             fontSize: 10,
-                  //           ),
-                  //         ),
-                  //         SizedBox(height: 10),
-                  //         Image.asset('assets/upload.png', height: 50),
-                  //         SizedBox(height: 10),
-                  //       ],
-                  //     ),
-                  //   ],
-                  // ),
                   Text(
                     'Description',
                     style: TextStyle(
@@ -304,7 +263,6 @@ class _MoiAddCollectionsState extends State<MoiAddCollections> {
                     alignHintTop: false,
                   ),
                   SizedBox(height: 15),
-
                   AppButton(text: 'SUBMIT', onTap: () {}),
                 ],
               ),

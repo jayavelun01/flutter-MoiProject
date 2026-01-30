@@ -194,7 +194,6 @@ class MoiViewCollection extends StatelessWidget {
                             children: [
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
-                                // crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   if (profile.prodImage != null)
@@ -238,11 +237,7 @@ class MoiViewCollection extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(right: 5),
                           child: Row(
-                            // mainAxisAlignment: MainAxisAlignment.end,
-                            // crossAxisAlignment: CrossAxisAlignment.end,
-                            // mainAxisSize: MainAxisSize.min,
                             children: [
-                              // if (profile.amount != null)
                               Text(
                                 profile.amount,
                                 style: const TextStyle(

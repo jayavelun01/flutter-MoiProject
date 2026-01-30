@@ -71,28 +71,6 @@ class MoiForgotPassword extends StatelessWidget {
                       ),
                       SizedBox(height: 40),
                       AppButton(text: 'SEND', onTap: () {}),
-                      // GestureDetector(
-                      //   onTap: () {},
-
-                      //   child: Container(
-                      //     alignment: Alignment.center,
-                      //     height: 50,
-                      //     width: 350,
-                      //     decoration: BoxDecoration(
-                      //       color: Color(0xFF89241C),
-                      //       borderRadius: BorderRadius.circular(30),
-                      //     ),
-                      //     child: Text(
-                      //       'SEND',
-                      //       style: TextStyle(
-                      //         fontFamily: 'DMSerifDisplay',
-                      //         color: Colors.white,
-                      //         fontSize: 14,
-                      //         fontWeight: FontWeight.bold,
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),

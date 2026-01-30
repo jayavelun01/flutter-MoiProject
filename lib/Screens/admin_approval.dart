@@ -11,7 +11,6 @@ class MoiAdminApproval extends StatelessWidget {
         children: [
           Image.asset('assets/Splash_Screen_Init.png', fit: BoxFit.cover),
           Column(
-            // mainAxisSize: MainAxisSize.min,
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 100),
@@ -82,7 +81,6 @@ class MoiAdminApproval extends StatelessWidget {
                               fontSize: 14,
                               color: Colors.white,
                             ),
-                            // textAlign: TextAlign.center,
                           ),
                         ),
                       ),

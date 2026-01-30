@@ -6,8 +6,6 @@ class MoiGetStartedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final colors = Theme.of(context).colorScheme;
-
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -33,11 +31,7 @@ class MoiGetStartedScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Image.asset(
-                  'assets/Group_1000003096_1.png',
-                  // width: 60,
-                  height: 90,
-                ),
+                Image.asset('assets/Group_1000003096_1.png', height: 90),
                 SizedBox(height: 16),
                 Text(
                   'To gather contributions and making your dream wedding a reality starts here.\n'

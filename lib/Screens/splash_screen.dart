@@ -13,9 +13,6 @@ class _MoiSplashScreenState extends State<MoiSplashScreen> {
   void initState() {
     super.initState();
 
-    // _initializeApp();
-
-    // Future<void> _initializeApp() async {
     Future.delayed(const Duration(seconds: 2), () {
       if (!mounted) return;
 
@@ -47,6 +44,5 @@ class _MoiSplashScreenState extends State<MoiSplashScreen> {
         ],
       ),
     );
-    // backgroundColor: Colors.pink[100]
   }
 }

@@ -77,9 +77,8 @@ class MoiNotifications extends StatelessWidget {
                           ],
                         ),
                         child: Row(
-                          // mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          // mainAxisSize: MainAxisSize.min,
+
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(15),
@@ -120,7 +119,6 @@ class MoiNotifications extends StatelessWidget {
                       ),
                     );
                   },
-                  // separatorBuilder: (context, index) => SizedBox(height: 5),
                 ),
               ),
             ),

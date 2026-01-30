@@ -10,13 +10,6 @@ class MoiSignupScreen extends StatefulWidget {
 }
 
 class _MoiSignupScreenState extends State<MoiSignupScreen> {
-  // bool _obscure = true;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

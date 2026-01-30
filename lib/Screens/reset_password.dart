@@ -139,27 +139,6 @@ class _MoiResetPasswordState extends State<MoiResetPassword> {
                       ),
                       SizedBox(height: 20),
                       AppButton(text: 'SUBMIT', onTap: () {}),
-                      // GestureDetector(
-                      //   onTap: () {},
-                      //   child: Container(
-                      //     height: 50,
-                      //     width: 350,
-                      //     alignment: Alignment.center,
-                      //     decoration: BoxDecoration(
-                      //       color: Color(0xFF89241C),
-                      //       borderRadius: BorderRadius.circular(30),
-                      //     ),
-                      //     child: Text(
-                      //       'SUBMIT',
-                      //       style: TextStyle(
-                      //         fontFamily: 'DMSerifDisplay',
-                      //         color: Colors.white,
-                      //         fontSize: 12,
-                      //         fontWeight: FontWeight.normal,
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),

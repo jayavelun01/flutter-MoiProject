@@ -47,7 +47,6 @@ class MoiVerificationScreen extends StatelessWidget {
                       topRight: Radius.circular(30),
                     ),
                   ),
-
                   child: Column(
                     children: [
                       Padding(
@@ -110,28 +109,6 @@ class MoiVerificationScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 15),
                       AppButton(text: 'VERIFY OTP', onTap: () {}),
-                      // GestureDetector(
-                      //   onTap: () {},
-
-                      //   child: Container(
-                      //     alignment: Alignment.center,
-                      //     height: 50,
-                      //     width: 350,
-                      //     decoration: BoxDecoration(
-                      //       color: Color(0xFF89241C),
-                      //       borderRadius: BorderRadius.circular(30),
-                      //     ),
-                      //     child: Text(
-                      //       'VERIFY OTP',
-                      //       style: TextStyle(
-                      //         fontFamily: 'DMSerifDisplay',
-                      //         color: Colors.white,
-                      //         fontSize: 12,
-                      //         fontWeight: FontWeight.bold,
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),

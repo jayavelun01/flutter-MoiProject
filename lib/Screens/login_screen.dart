@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moi_appdesign/Screens/signup_screen.dart';
 import 'package:moi_appdesign/Widgets/app_button.dart';
 
 class MoiLoginScreen extends StatefulWidget {
@@ -132,11 +131,7 @@ class _MoiLoginScreenState extends State<MoiLoginScreen> {
                             ),
                             prefixIcon: Padding(
                               padding: const EdgeInsets.all(16.0),
-                              child: Image.asset(
-                                'assets/Lock.png',
-                                // height: 2,
-                                // width: 2,
-                              ),
+                              child: Image.asset('assets/Lock.png'),
                             ),
                           ),
                         ),
@@ -170,27 +165,6 @@ class _MoiLoginScreenState extends State<MoiLoginScreen> {
                             Navigator.pushNamed(context, '/home');
                           },
                         ),
-                        // Container(
-                        //   height: 50,
-                        //   width: 350,
-                        //   decoration: BoxDecoration(
-                        //     color: Color(0xFF89241C),
-                        //     borderRadius: BorderRadius.circular(30),
-                        //   ),
-
-                        //   child: Center(
-                        //     child: Text(
-                        //       'LOGIN',
-                        //       style: TextStyle(
-                        //         fontFamily: 'DMSerifDisplay',
-                        //         color: Colors.white,
-                        //         fontSize: 14,
-                        //         fontWeight: FontWeight.bold,
-                        //       ),
-                        //       textAlign: TextAlign.center,
-                        //     ),
-                        //   ),
-                        // ),
                       ],
                     ),
                   ],
