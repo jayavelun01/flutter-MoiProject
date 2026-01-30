@@ -241,11 +241,15 @@ class _MoiHomeScreenState extends State<MoiHomeScreen> {
       child: Padding(
         padding: const EdgeInsets.only(top: 30),
         child: ListView.separated(
-          itemCount: drawerItems.length,
+          itemCount: drawerItems.length + 1,
           separatorBuilder: (context, index) {
             return Divider(color: Colors.white, height: 1);
           },
           itemBuilder: (context, index) {
+            if (index == drawerItems.length) {
+              return const SizedBox();
+            }
+
             final item1 = drawerItems[index];
 
             return ListTile(
@@ -261,7 +265,7 @@ class _MoiHomeScreenState extends State<MoiHomeScreen> {
               trailing: Icon(
                 Icons.chevron_right,
                 color: Colors.white,
-                size: 20,
+                size: 24,
               ),
               horizontalTitleGap: 8,
               onTap: () {

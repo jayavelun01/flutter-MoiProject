@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:moi_appdesign/Widgets/app_member.dart';
 import 'package:moi_appdesign/Widgets/app_textfield_normal.dart';
@@ -244,16 +242,16 @@ class MoiViewCollection extends StatelessWidget {
                             // crossAxisAlignment: CrossAxisAlignment.end,
                             // mainAxisSize: MainAxisSize.min,
                             children: [
-                              if (profile.amount != null)
-                                Text(
-                                  profile.amount!,
-                                  style: const TextStyle(
-                                    fontFamily: 'DMSerifDisplay',
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.green,
-                                  ),
+                              // if (profile.amount != null)
+                              Text(
+                                profile.amount,
+                                style: const TextStyle(
+                                  fontFamily: 'DMSerifDisplay',
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green,
                                 ),
+                              ),
                             ],
                           ),
                         ),

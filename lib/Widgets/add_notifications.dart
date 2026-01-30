@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class NotificationDetails {
   final String funcName;
   final String name;
