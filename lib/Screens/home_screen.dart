@@ -29,8 +29,8 @@ class _MoiHomeScreenState extends State<MoiHomeScreen> {
       'image': 'assets/Notifications.png',
       'route': '/notifications',
     },
-    {'title': 'Help', 'image': 'assets/Help.png', 'route': '/help'},
-    {'title': 'Share the App', 'image': 'assets/Share.png', 'route': '/share'},
+    {'title': 'Help', 'image': 'assets/Help.png', 'route': '/login'},
+    {'title': 'Share the App', 'image': 'assets/Share.png', 'route': '/login'},
     {'title': 'Log out', 'image': 'assets/Logout.png', 'route': '/login'},
   ];
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moi_appdesign/Screens/signup_screen.dart';
 import 'package:moi_appdesign/Widgets/app_button.dart';
 
 class MoiLoginScreen extends StatefulWidget {
@@ -163,7 +164,12 @@ class _MoiLoginScreenState extends State<MoiLoginScreen> {
                           ),
                         ),
                         SizedBox(height: 25),
-                        AppButton(text: 'LOGIN', onTap: () {}),
+                        AppButton(
+                          text: 'LOGIN',
+                          onTap: () {
+                            Navigator.pushNamed(context, '/home');
+                          },
+                        ),
                         // Container(
                         //   height: 50,
                         //   width: 350,
