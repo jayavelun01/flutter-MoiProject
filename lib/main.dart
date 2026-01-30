@@ -8,7 +8,6 @@ import 'package:moi_appdesign/Screens/notifications_screen.dart';
 import 'package:moi_appdesign/Screens/view_CollectionDetails.dart';
 import 'package:moi_appdesign/Screens/view_collection.dart';
 import 'package:moi_appdesign/Screens/view_functions.dart';
-import 'package:moi_appdesign/Widgets/app_theme.dart';
 import 'package:moi_appdesign/Screens/forgot_password.dart';
 import 'package:moi_appdesign/Screens/getstarted_screen.dart';
 import 'package:moi_appdesign/Screens/login_screen.dart';
@@ -35,22 +34,22 @@ class MyApp extends StatelessWidget {
       // initialRoute: '/',
       home: const MoiHomeScreen(),
       routes: {
+        '/home': (context) => MoiHomeScreen(),
         '/notifications': (context) => MoiNotifications(),
         '/myProfile': (context) => MoiMyprofile(),
-        // '/': (context) => MoiAddCollections(),
-        // '/': (context) => MoiCollectionDetails(),
-        // '/': (context) => MoiViewCollection(),
-        // '/': (context) => MoiSplashScreen(),
-        // '/': (context) => MoiResetPassword(),
+        '/addCollections': (context) => MoiAddCollections(),
+        '/collectionDetails': (context) => MoiCollectionDetails(),
+        '/viewCollection': (context) => MoiViewCollection(),
+        '/splashScreen': (context) => MoiSplashScreen(),
+        '/resetPassword': (context) => MoiResetPassword(),
         '/viewFunction': (context) => MoiViewFunctions(),
         '/createFunction': (context) => MoiCreateFunction(),
-        '/home': (context) => MoiHomeScreen(),
-        // '/': (context) => MoiAdminApproval(),
-        // '/': (context) => MoiSignupScreen(),
-        // '/verification_screen': (context) => MoiVerificationScreen(),
-        // '/forgot_Screen': (context) => MoiForgotPassword(),
-        // '/getStarted_Screen': (context) => MoiGetStartedScreen(),
-        // '/login_Screen': (context) => MoiLoginScreen(),
+        '/adminApproval': (context) => MoiAdminApproval(),
+        '/signUp': (context) => MoiSignupScreen(),
+        '/verification': (context) => MoiVerificationScreen(),
+        '/forgotScreen': (context) => MoiForgotPassword(),
+        '/getStarted': (context) => MoiGetStartedScreen(),
+        '/login': (context) => MoiLoginScreen(),
       },
     );
   }

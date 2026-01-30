@@ -94,9 +94,11 @@ class MoiViewFunctions extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        leading: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Image.asset('assets/Back.png'),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('assets/Back.png', height: 16),
         ),
       ),
       body: Expanded(

@@ -12,9 +12,11 @@ class MoiCreateFunction extends StatelessWidget {
       appBar: AppBar(
         leadingWidth: 45,
         titleSpacing: 0,
-        leading: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Image.asset('assets/Back.png'),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('assets/Back.png', height: 16),
         ),
         title: Text(
           'Create a Function',

@@ -31,7 +31,7 @@ class _MoiHomeScreenState extends State<MoiHomeScreen> {
     },
     {'title': 'Help', 'image': 'assets/Help.png', 'route': '/help'},
     {'title': 'Share the App', 'image': 'assets/Share.png', 'route': '/share'},
-    {'title': 'Log out', 'image': 'assets/Logout.png', 'route': '/logout'},
+    {'title': 'Log out', 'image': 'assets/Logout.png', 'route': '/login'},
   ];
 
   final List<Map<String, dynamic>> functionslist = [

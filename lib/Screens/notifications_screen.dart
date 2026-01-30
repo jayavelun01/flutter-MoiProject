@@ -34,9 +34,11 @@ class MoiNotifications extends StatelessWidget {
             fontSize: 16,
           ),
         ),
-        leading: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Image.asset('assets/Back.png', height: 10, width: 10),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('assets/Back.png', height: 16),
         ),
       ),
       body: Column(

@@ -3,7 +3,6 @@ import 'package:moi_appdesign/Widgets/app_button.dart';
 import 'package:moi_appdesign/Widgets/app_textfield.dart';
 
 class MoiMyprofile extends StatelessWidget {
-  
   const MoiMyprofile({super.key});
 
   @override
@@ -23,9 +22,11 @@ class MoiMyprofile extends StatelessWidget {
             fontSize: 16,
           ),
         ),
-        leading: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Image.asset('assets/Back.png', height: 10, width: 10),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('assets/Back.png', height: 10, width: 10),
         ),
       ),
       body: Center(
