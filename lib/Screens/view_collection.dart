@@ -102,7 +102,6 @@ class MoiViewCollection extends StatelessWidget {
                 child: Icon(Icons.search),
               ),
             ),
-            // SizedBox(width: 10),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Row(
@@ -127,7 +126,6 @@ class MoiViewCollection extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 5),
             Expanded(
               child: ListView.builder(
                 itemCount: profileItems.length,
@@ -147,84 +145,88 @@ class MoiViewCollection extends StatelessWidget {
                         borderRadius: BorderRadius.circular(14),
                       ),
                       child: Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: CircleAvatar(
-                              radius: 30, // diameter = 60
-                              backgroundImage: AssetImage('assets/profile.png'),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              // mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text(
-                                  profile.name,
-                                  style: TextStyle(
-                                    fontFamily: 'DMSerifDisplay',
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.normal,
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: CircleAvatar(
+                                  radius: 25, // diameter = 60
+                                  backgroundImage: AssetImage(
+                                    'assets/profile.png',
                                   ),
-                                ),
-                                Text(
-                                  profile.role,
-                                  style: TextStyle(
-                                    fontFamily: 'DMSerifDisplay',
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w100,
-                                  ),
-                                ),
-                                Text(
-                                  profile.location,
-                                  style: TextStyle(
-                                    fontFamily: 'DMSerifDisplay',
-                                    fontSize: 10,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(width: 20),
-                          if (profile.prodImage != null)
-                            GestureDetector(
-                              onTap: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (context) => Dialog(
-                                    backgroundColor: Colors.white,
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(15),
-                                      child: InteractiveViewer(
-                                        // panEnabled: true,
-                                        minScale: 1.0,
-                                        maxScale: 4.0,
-                                        child: Image.asset(profile.prodImage!),
-                                      ),
-                                    ),
-                                  ),
-                                );
-                              },
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Image.asset(
-                                  profile.prodImage!,
-                                  // width: 30,
-                                  height: 50,
-                                  fit: BoxFit.cover,
                                 ),
                               ),
-                            ),
-                          SizedBox(width: 25),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 5),
-                            child: Row(
-                              children: [
-                                Text(
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    profile.name,
+                                    style: TextStyle(
+                                      fontFamily: 'DMSerifDisplay',
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                                  ),
+                                  Text(
+                                    profile.role,
+                                    style: TextStyle(
+                                      fontFamily: 'DMSerifDisplay',
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w100,
+                                    ),
+                                  ),
+                                  Text(
+                                    profile.location,
+                                    style: TextStyle(
+                                      fontFamily: 'DMSerifDisplay',
+                                      fontSize: 10,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              if (profile.prodImage != null)
+                                GestureDetector(
+                                  onTap: () {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => Dialog(
+                                        backgroundColor: Colors.white,
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(
+                                            15,
+                                          ),
+                                          child: InteractiveViewer(
+                                            // panEnabled: true,
+                                            minScale: 1.0,
+                                            maxScale: 4.0,
+                                            child: Image.asset(
+                                              profile.prodImage!,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.asset(
+                                      profile.prodImage!,
+                                      height: 50,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Text(
                                   profile.amount,
                                   style: const TextStyle(
                                     fontFamily: 'DMSerifDisplay',
@@ -233,8 +235,8 @@ class MoiViewCollection extends StatelessWidget {
                                     color: Colors.green,
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

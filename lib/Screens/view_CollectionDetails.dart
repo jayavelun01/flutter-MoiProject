@@ -78,7 +78,6 @@ class MoiCollectionDetails extends StatelessWidget {
       body: Column(
         children: [
           Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CircleAvatar(
@@ -162,10 +161,8 @@ class MoiCollectionDetails extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(15.0),
                                   child: Column(
-                                    // mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    // mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Text(
                                         profile.fname,

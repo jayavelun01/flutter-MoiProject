@@ -25,7 +25,6 @@ class FunctionCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.grey.shade200,
         borderRadius: BorderRadius.circular(16),
-        // boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.08))],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -27,7 +27,6 @@ class MoiForgotPassword extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
                   ),
-
                   child: Column(
                     children: [
                       Padding(
@@ -53,7 +52,6 @@ class MoiForgotPassword extends StatelessWidget {
                         ),
                         child: TextField(
                           textAlignVertical: TextAlignVertical.center,
-                          // textAlign: TextAlign.left,
                           decoration: InputDecoration(
                             hintText: 'Enter Mobile Number',
                             hintStyle: TextStyle(

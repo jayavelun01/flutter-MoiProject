@@ -121,7 +121,6 @@ class MoiViewFunctions extends StatelessWidget {
                       Navigator.pushNamed(context, '/viewCollection');
                     }
                   : null,
-        
               child: Padding(
                 padding: const EdgeInsets.only(top: 8),
                 child: FunctionCard(

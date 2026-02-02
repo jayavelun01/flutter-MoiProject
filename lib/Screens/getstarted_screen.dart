@@ -37,6 +37,7 @@ class MoiGetStartedScreen extends StatelessWidget {
                   'To gather contributions and making your dream wedding a reality starts here.\n'
                   'Please provide your login details below to access your wedding fund dashboard',
                   textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.black, fontSize: 14),
                 ),
                 SizedBox(height: 26),
                 GestureDetector(
@@ -90,13 +91,18 @@ class MoiGetStartedScreen extends StatelessWidget {
                       ),
                     ),
 
-                    child: Text(
-                      'SIGN UP',
-                      style: TextStyle(
-                        fontFamily: 'DMSerifDisplay',
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF89241C),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/signUp');
+                      },
+                      child: Text(
+                        'SIGN UP',
+                        style: TextStyle(
+                          fontFamily: 'DMSerifDisplay',
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF89241C),
+                        ),
                       ),
                     ),
                   ),

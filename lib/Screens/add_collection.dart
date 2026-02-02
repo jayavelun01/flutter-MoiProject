@@ -5,7 +5,7 @@ import 'package:moi_appdesign/Widgets/app_textfield_normal.dart';
 enum Options { Money, Things, Both }
 
 class MoiAddCollections extends StatefulWidget {
-  MoiAddCollections({super.key});
+  const MoiAddCollections({super.key});
 
   @override
   State<MoiAddCollections> createState() => _MoiAddCollectionsState();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moi_appdesign/Screens/add_collection_01.dart';
+import 'package:moi_appdesign/Screens/add_collection.dart';
 import 'package:moi_appdesign/Screens/admin_approval.dart';
 import 'package:moi_appdesign/Screens/create_function.dart';
 import 'package:moi_appdesign/Screens/home_screen.dart';

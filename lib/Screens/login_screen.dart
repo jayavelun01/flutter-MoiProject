@@ -23,7 +23,6 @@ class _MoiLoginScreenState extends State<MoiLoginScreen> {
           ),
         ),
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
             Padding(

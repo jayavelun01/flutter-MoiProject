@@ -67,9 +67,7 @@ class _MoiHomeScreenState extends State<MoiHomeScreen> {
           onPressed: () {
             _scaffoldKey.currentState?.openDrawer();
           },
-          // icon: Icon(Icons.menu, color: Colors.white),
         ),
-        // leading: Image.asset('assets/Menu_rounded.png', width: 60),
         actions: [
           Icon(Icons.notifications_none, color: Colors.white),
           SizedBox(width: 10),
@@ -88,7 +86,6 @@ class _MoiHomeScreenState extends State<MoiHomeScreen> {
                   topLeft: Radius.circular(30),
                   topRight: Radius.circular(30),
                 ),
-                // borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
               ),
               child: Column(
                 children: [
