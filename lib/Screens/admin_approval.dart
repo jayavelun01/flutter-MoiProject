@@ -64,7 +64,9 @@ class MoiAdminApproval extends StatelessWidget {
                       ),
                       SizedBox(height: 15),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(context, '/home');
+                        },
 
                         child: Container(
                           height: 40,

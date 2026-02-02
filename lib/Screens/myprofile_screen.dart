@@ -26,7 +26,7 @@ class MoiMyprofile extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Image.asset('assets/Back.png', height: 10, width: 10),
+          icon: Image.asset('assets/Back.png', height: 14),
         ),
       ),
       body: Center(
@@ -34,7 +34,7 @@ class MoiMyprofile extends StatelessWidget {
           children: [
             Image.asset('assets/profile.png', height: 70),
             Text(
-              'Ganesh',
+              'Ganesh01',
               style: TextStyle(
                 fontFamily: 'DMSerifDisplay',
                 color: Colors.white,

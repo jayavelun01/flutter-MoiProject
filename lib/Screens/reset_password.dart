@@ -138,7 +138,12 @@ class _MoiResetPasswordState extends State<MoiResetPassword> {
                         ),
                       ),
                       SizedBox(height: 20),
-                      AppButton(text: 'SUBMIT', onTap: () {}),
+                      AppButton(
+                        text: 'SUBMIT',
+                        onTap: () {
+                          Navigator.pushNamed(context, '/login');
+                        },
+                      ),
                     ],
                   ),
                 ),

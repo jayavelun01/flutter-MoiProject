@@ -128,14 +128,11 @@ class _MoiAddCollectionsState extends State<MoiAddCollections> {
             color: Colors.white,
           ),
         ),
-        leading: Padding(
-          padding: const EdgeInsets.all(18),
-          child: Image.asset(
-            'assets/Back.png',
-            height: 10,
-            width: 10,
-            fit: BoxFit.contain,
-          ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('assets/Back.png', height: 14, fit: BoxFit.contain),
         ),
       ),
       body: Container(
@@ -263,7 +260,12 @@ class _MoiAddCollectionsState extends State<MoiAddCollections> {
                     alignHintTop: false,
                   ),
                   SizedBox(height: 15),
-                  AppButton(text: 'SUBMIT', onTap: () {}),
+                  AppButton(
+                    text: 'SUBMIT',
+                    onTap: () {
+                      Navigator.pushNamed(context, '/viewCollection');
+                    },
+                  ),
                 ],
               ),
             ),

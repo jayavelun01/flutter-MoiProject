@@ -112,64 +112,32 @@ class _MoiHomeScreenState extends State<MoiHomeScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Container(
-                        height: 120,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF9A2143),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 20),
-                              child: Image.asset(
-                                'assets/functional 1.png',
-                                width: 60,
-                                height: 60,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                // textAlign: TextAlign.center,
-                                'CREATE A FUNCTION',
-                                style: TextStyle(
-                                  fontFamily: 'DMSerifDisplay',
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 120,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF9A2143),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Stack(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 20),
-                              child: Align(
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/createFunction');
+                        },
+                        child: Container(
+                          height: 120,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF9A2143),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 20),
                                 child: Image.asset(
-                                  'assets/View_function1.png',
-                                  width: 50,
-                                  height: 50,
-                                  fit: BoxFit.contain,
+                                  'assets/functional 1.png',
+                                  width: 60,
+                                  height: 60,
                                 ),
                               ),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Padding(
-                                padding: const EdgeInsets.only(bottom: 15),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  'VIEW FUNCTIONS',
+                                  // textAlign: TextAlign.center,
+                                  'CREATE A FUNCTION',
                                   style: TextStyle(
                                     fontFamily: 'DMSerifDisplay',
                                     fontSize: 12,
@@ -177,8 +145,50 @@ class _MoiHomeScreenState extends State<MoiHomeScreen> {
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/viewFunction');
+                        },
+                        child: Container(
+                          height: 120,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF9A2143),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 20),
+                                child: Align(
+                                  child: Image.asset(
+                                    'assets/View_function1.png',
+                                    width: 50,
+                                    height: 50,
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(bottom: 15),
+                                  child: Text(
+                                    'VIEW FUNCTIONS',
+                                    style: TextStyle(
+                                      fontFamily: 'DMSerifDisplay',
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],

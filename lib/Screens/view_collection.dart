@@ -69,15 +69,18 @@ class MoiViewCollection extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-
-        leading: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Image.asset('assets/Back.png'),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Image.asset('assets/Back.png', height: 14),
         ),
         backgroundColor: Color(0xFF9A2143),
       ),
       floatingActionButton: RawMaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/addCollections');
+        },
         shape: CircleBorder(),
         constraints: BoxConstraints(minWidth: 60, minHeight: 60),
         child: Icon(Icons.add_circle, size: 46, color: Color(0xFF9A2143)),
@@ -89,20 +92,15 @@ class MoiViewCollection extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
         ),
-
         child: Column(
           children: [
             SizedBox(height: 10),
-            Column(
-              children: [
-                AppTextfieldNormal(
-                  hint: 'Search Name / Mobile Number',
-                  prefix: Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Icon(Icons.search),
-                  ),
-                ),
-              ],
+            AppTextfieldNormal(
+              hint: 'Search Name / Mobile Number',
+              prefix: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Icon(Icons.search),
+              ),
             ),
             // SizedBox(width: 10),
             Padding(
@@ -129,128 +127,117 @@ class MoiViewCollection extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: 5),
             Expanded(
               child: ListView.builder(
                 itemCount: profileItems.length,
                 padding: EdgeInsets.all(12),
                 itemBuilder: (context, index) {
                   final profile = profileItems[index];
-
-                  return Container(
-                    margin: const EdgeInsets.only(bottom: 8),
-                    height: 80,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade200,
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: CircleAvatar(
-                            radius: 30, // diameter = 60
-                            backgroundImage: AssetImage('assets/profile.png'),
+                  return InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/collectionDetails');
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      height: 80,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade200,
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: CircleAvatar(
+                              radius: 30, // diameter = 60
+                              backgroundImage: AssetImage('assets/profile.png'),
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Column(
-                            // mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Text(
-                                profile.name,
-                                style: TextStyle(
-                                  fontFamily: 'DMSerifDisplay',
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.normal,
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Column(
+                              // mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  profile.name,
+                                  style: TextStyle(
+                                    fontFamily: 'DMSerifDisplay',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                profile.role,
-                                style: TextStyle(
-                                  fontFamily: 'DMSerifDisplay',
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w100,
+                                Text(
+                                  profile.role,
+                                  style: TextStyle(
+                                    fontFamily: 'DMSerifDisplay',
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w100,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                profile.location,
-                                style: TextStyle(
-                                  fontFamily: 'DMSerifDisplay',
-                                  fontSize: 10,
+                                Text(
+                                  profile.location,
+                                  style: TextStyle(
+                                    fontFamily: 'DMSerifDisplay',
+                                    fontSize: 10,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 20),
-                        Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Column(
-                            children: [
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  if (profile.prodImage != null)
-                                    GestureDetector(
-                                      onTap: () {
-                                        showDialog(
-                                          context: context,
-                                          builder: (context) => Dialog(
-                                            backgroundColor: Colors.white,
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(15),
-                                              child: InteractiveViewer(
-                                                // panEnabled: true,
-                                                minScale: 1.0,
-                                                maxScale: 4.0,
-                                                child: Image.asset(
-                                                  profile.prodImage!,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(15),
-                                        child: Image.asset(
-                                          profile.prodImage!,
-                                          // width: 30,
-                                          height: 50,
-                                          fit: BoxFit.cover,
-                                        ),
+                          SizedBox(width: 20),
+                          if (profile.prodImage != null)
+                            GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => Dialog(
+                                    backgroundColor: Colors.white,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(15),
+                                      child: InteractiveViewer(
+                                        // panEnabled: true,
+                                        minScale: 1.0,
+                                        maxScale: 4.0,
+                                        child: Image.asset(profile.prodImage!),
                                       ),
                                     ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(width: 25),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 5),
-                          child: Row(
-                            children: [
-                              Text(
-                                profile.amount,
-                                style: const TextStyle(
-                                  fontFamily: 'DMSerifDisplay',
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green,
+                                  ),
+                                );
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(15),
+                                child: Image.asset(
+                                  profile.prodImage!,
+                                  // width: 30,
+                                  height: 50,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                            ],
+                            ),
+                          SizedBox(width: 25),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 5),
+                            child: Row(
+                              children: [
+                                Text(
+                                  profile.amount,
+                                  style: const TextStyle(
+                                    fontFamily: 'DMSerifDisplay',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.green,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   );
                 },

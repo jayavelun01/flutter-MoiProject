@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       // home: const MoiHomeScreen(),
       routes: {
+        // '/': (context) => MoiViewCollection(),
         '/': (context) => MoiSplashScreen(),
         '/home': (context) => MoiHomeScreen(),
         '/notifications': (context) => MoiNotifications(),
@@ -41,14 +42,13 @@ class MyApp extends StatelessWidget {
         '/addCollections': (context) => MoiAddCollections(),
         '/collectionDetails': (context) => MoiCollectionDetails(),
         '/viewCollection': (context) => MoiViewCollection(),
-
         '/resetPassword': (context) => MoiResetPassword(),
         '/viewFunction': (context) => MoiViewFunctions(),
         '/createFunction': (context) => MoiCreateFunction(),
         '/adminApproval': (context) => MoiAdminApproval(),
         '/signUp': (context) => MoiSignupScreen(),
         '/verification': (context) => MoiVerificationScreen(),
-        '/forgotScreen': (context) => MoiForgotPassword(),
+        '/forgotPassword': (context) => MoiForgotPassword(),
         '/getStarted': (context) => MoiGetStartedScreen(),
         '/login': (context) => MoiLoginScreen(),
       },

@@ -98,39 +98,42 @@ class MoiViewFunctions extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Image.asset('assets/Back.png', height: 16),
+          icon: Image.asset('assets/Back.png', height: 14),
         ),
       ),
-      body: Expanded(
-        child: Container(
-          height: double.infinity,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30),
-              topRight: Radius.circular(30),
-            ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
           ),
-          child: Column(
-            children: [
-              Expanded(
-                child: ListView.builder(
-                  itemCount: functionslist.length,
-                  itemBuilder: (context, index) {
-                    final item = functionslist[index];
-                    return FunctionCard(
-                      title: item['title'],
-                      date: item['date'],
-                      venue: item['venue'],
-                      moipersons: item['persons'],
-                      totalmoi: item['total'],
-                    );
-                  },
+        ),
+        child: ListView.builder(
+          itemCount: functionslist.length,
+          itemBuilder: (context, index) {
+            final item = functionslist[index];
+            return InkWell(
+              onTap: index == 0
+                  ? () {
+                      Navigator.pushNamed(context, '/viewCollection');
+                    }
+                  : null,
+        
+              child: Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: FunctionCard(
+                  title: item['title'],
+                  date: item['date'],
+                  venue: item['venue'],
+                  moipersons: item['persons'],
+                  totalmoi: item['total'],
                 ),
               ),
-            ],
-          ),
+            );
+          },
         ),
       ),
     );

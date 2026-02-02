@@ -38,7 +38,7 @@ class MoiNotifications extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: Image.asset('assets/Back.png', height: 16),
+          icon: Image.asset('assets/Back.png', height: 14),
         ),
       ),
       body: Column(

@@ -108,7 +108,12 @@ class MoiVerificationScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 15),
-                      AppButton(text: 'VERIFY OTP', onTap: () {}),
+                      AppButton(
+                        text: 'VERIFY OTP',
+                        onTap: () {
+                          Navigator.pushNamed(context, '/resetPassword');
+                        },
+                      ),
                     ],
                   ),
                 ),

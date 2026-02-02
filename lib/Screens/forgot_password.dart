@@ -70,7 +70,12 @@ class MoiForgotPassword extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 40),
-                      AppButton(text: 'SEND', onTap: () {}),
+                      AppButton(
+                        text: 'SEND',
+                        onTap: () {
+                          Navigator.pushNamed(context, '/verification');
+                        },
+                      ),
                     ],
                   ),
                 ),

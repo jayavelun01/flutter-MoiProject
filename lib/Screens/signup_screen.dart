@@ -89,7 +89,12 @@ class _MoiSignupScreenState extends State<MoiSignupScreen> {
                         suffix: Icon(Icons.arrow_drop_down),
                       ),
                       SizedBox(height: 20),
-                      AppButton(text: 'SIGNUP', onTap: () {}),
+                      AppButton(
+                        text: 'SIGNUP',
+                        onTap: () {
+                          Navigator.pushNamed(context, '/adminApproval');
+                        },
+                      ),
                     ],
                   ),
                 ),

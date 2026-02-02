@@ -141,21 +141,31 @@ class _MoiLoginScreenState extends State<MoiLoginScreen> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text(
-                          'CREATE NEW ACCOUNT',
-                          style: TextStyle(
-                            fontFamily: 'DMSerifDisplay',
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF89241C),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/signUp');
+                          },
+                          child: Text(
+                            'CREATE NEW ACCOUNT',
+                            style: TextStyle(
+                              fontFamily: 'DMSerifDisplay',
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF89241C),
+                            ),
                           ),
                         ),
                         SizedBox(height: 5),
-                        Text(
-                          'Forgot Password?',
-                          style: TextStyle(
-                            fontFamily: 'DMSerifDisplay',
-                            fontSize: 10,
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/forgotPassword');
+                          },
+                          child: Text(
+                            'Forgot Password?',
+                            style: TextStyle(
+                              fontFamily: 'DMSerifDisplay',
+                              fontSize: 10,
+                            ),
                           ),
                         ),
                         SizedBox(height: 25),
