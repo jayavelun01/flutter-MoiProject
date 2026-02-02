@@ -27,14 +27,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // theme: ThemeData(useMaterial3: true, colorScheme: AppColors.lightScheme),
-      // themeMode: ThemeMode.system,
-      // colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF89241C)),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-      // home: const MoiHomeScreen(),
       routes: {
-        // '/': (context) => MoiViewCollection(),
         '/': (context) => MoiSplashScreen(),
         '/home': (context) => MoiHomeScreen(),
         '/notifications': (context) => MoiNotifications(),
